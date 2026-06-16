@@ -1,0 +1,41 @@
+{
+  "name": "Image Share Target",
+  "short_name": "ImageShare",
+  "description": "Android Share Target PWA",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1976d2",
+
+  "id": "/REPO/",
+  "start_url": "/REPO/",
+  "scope": "/REPO/",
+
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+
+  "share_target": {
+    "action": "/REPO/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "files": [
+        {
+          "name": "images",
+          "accept": [
+            "image/*"
+          ]
+        }
+      ]
+    }
+  }
+}
