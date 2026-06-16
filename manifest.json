@@ -6,9 +6,9 @@
   "background_color": "#ffffff",
   "theme_color": "#1976d2",
 
-  "id": "/REPO/",
-  "start_url": "/REPO/",
-  "scope": "/REPO/",
+  "id": "/REPO-UPLOAD/",
+  "start_url": "/REPO-UPLOAD/",
+  "scope": "/REPO-UPLOAD/",
 
   "icons": [
     {
