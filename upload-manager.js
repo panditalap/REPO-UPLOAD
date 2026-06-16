@@ -1,3 +1,15 @@
+document.getElementById("testUpload").addEventListener("click", async () => {
+
+  const files =
+    [...document
+      .getElementById("testFiles")
+      .files];
+
+  await UploadManager.uploadFiles(files);
+
+});
+
+
 const UploadManager = (() => {
 
   const API_URL =
@@ -91,6 +103,8 @@ const UploadManager = (() => {
 
         xhr.onload = () => {
 
+          console.log("Upload complete");
+
           resolve(
             JSON.parse(
               xhr.responseText
@@ -99,8 +113,7 @@ const UploadManager = (() => {
 
         };
 
-        xhr.onerror =
-          reject;
+        xhr.onerror = reject;
 
         xhr.open(
           "POST",
@@ -111,6 +124,8 @@ const UploadManager = (() => {
           "Content-Type",
           "application/json"
         );
+
+        console.log("Starting upload", file.name);
 
         xhr.send(
           JSON.stringify({
