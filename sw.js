@@ -57,7 +57,7 @@ async function handleShare(event){
     await clearStore();
     await saveFiles(files);
     return Response.redirect(
-        "/REPO/?shared=1",
+        "/REPO-UPLOAD/?shared=1",
         303
     );
 }
